@@ -10,13 +10,13 @@ from sklearn.cluster import KMeans
 # Fungsi untuk memuat data (sesuaikan path file dengan lokasi data Anda)
 @st.cache_data
 def load_data():
-    dim_customer = pd.read_csv("../data/olist_customers_dataset.csv")
-    dim_order = pd.read_csv("../data/dim_order_cleaned.csv")
-    dim_product = pd.read_csv("../data/dim_product_cleaned.csv")
-    dim_order_item = pd.read_csv("../data/olist_order_items_dataset.csv")
-    dim_order_payment = pd.read_csv("../data/olist_order_payments_dataset.csv")
-    dim_seller = pd.read_csv("../data/olist_sellers_dataset.csv")
-    fact_sales = pd.read_excel("../data/Fact_Sales.xls") 
+    dim_customer = pd.read_csv("./data/olist_customers_dataset.csv")
+    dim_order = pd.read_csv("./data/dim_order_cleaned.csv")
+    dim_product = pd.read_csv("./data/dim_product_cleaned.csv")
+    dim_order_item = pd.read_csv("./data/olist_order_items_dataset.csv")
+    dim_order_payment = pd.read_csv("./data/olist_order_payments_dataset.csv")
+    dim_seller = pd.read_csv("./data/olist_sellers_dataset.csv")
+    fact_sales = pd.read_excel("./data/Fact_Sales.xls") 
 
     # Lakukan preprocessing data seperti di notebook Anda
     dim_order.dropna(axis=0, inplace=True)
